@@ -13,7 +13,7 @@ namespace PadawansTask11
 
             if (array == null)
             {
-                throw new ArgumentNullException(nameof(array));                                                        
+                throw new ArgumentNullException(nameof(array));
             }
 
             double sumRight = 0;
@@ -24,8 +24,9 @@ namespace PadawansTask11
             {
                 sumRight += array[i];
             }
-
-            for (int i = 0; i < array.Length; i++)
+            sumRight-=array[0];
+            sumLeft+=array[0];
+            for (int i = 1; i < array.Length; i++)
             {
                 sumRight -= array[i];
 
@@ -34,7 +35,7 @@ namespace PadawansTask11
                     return i;
                 }
 
-                sumLeft += array[i];
+              
             }
 
             return null;
