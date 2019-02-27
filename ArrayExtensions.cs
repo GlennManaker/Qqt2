@@ -13,7 +13,7 @@ namespace PadawansTask11
 
             if (array == null)
             {
-                return null;                                                            
+                throw new ArgumentNullException(nameof(array));                                                        
             }
 
             double sumRight = 0;
